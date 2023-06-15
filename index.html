@@ -32,30 +32,30 @@
                 <div class="select-tip">
                     <h1>Select Tip %</h1>
                     <div class="custom-container">
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <div class="btn-group" role="group" >
                             <input type="radio" class="btn-check item" name="btnradio" id="5percent" autocomplete="off"
                                 checked>
-                            <label class="btn btn-outline-primary" for="5percent">5%</label>
+                            <label class="btn btn-outline" for="5percent">5%</label>
                         </div>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check item" name="btnradio" id="10percent" autocomplete="off"
                                 checked>
-                            <label class="btn btn-outline-primary" for="10percent">10%</label>
+                            <label class="btn btn-outline-#20c997" for="10percent">10%</label>
                         </div>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check item" name="btnradio" id="15percent" autocomplete="off"
                                 checked>
-                            <label class="btn btn-outline-primary" for="15percent">15%</label>
+                            <label class="btn btn-outline-" for="15percent">15%</label>
                         </div>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check item" name="btnradio" id="25percent" autocomplete="off"
                                 checked>
-                            <label class="btn btn-outline-primary" for="25percent">25%</label>
+                            <label class="btn btn-outline" for="25percent">25%</label>
                         </div>
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check item" name="btnradio" id="50percent" autocomplete="off"
                                 checked>
-                            <label class="btn btn-outline-primary" for="50percent">50%</label>
+                            <label class="btn" for="50percent">50%</label>
                         </div>
                         <input class="form-control item" type="text" placeholder="Custom"
                             aria-label="default input example">
@@ -71,10 +71,10 @@
             <div class="col-6 right-column">
                 <div class="row right-column-first-div">
                     <div class="Tip-Amount col-6 mb-4">Tip Amount <br> <span class="person-span">/ person</span></div>
-                    <div class="Tip-Result col-6">0.00</div>
+                    <div id="Tip-Result" class="Tip-Result col-6">$0.00</div>
                     <div class="Total col-6">Total <br> <span class="person-span">/ person </span></div>
-                    <div class="Total-Result col-6">0.00</div>
-                    <button class="btn btn-primary" type="button">Button</button>
+                    <div id="Total-Result" class="Total-Result col-6">$0.00</div>
+                    <button id="reset-Button" class="btn btn-primary" type="button">Button</button>
                 </div>
             </div>
         </section>

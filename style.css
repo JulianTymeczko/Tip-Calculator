@@ -1,5 +1,5 @@
 * {
-    font-size:24px !important;
+    font-size: 24px !important;
     font-family: 'Lato', sans-serif;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
@@ -13,13 +13,13 @@ body {
 .custom-main {
     background-color: hsl(0, 0%, 100%);
     width: 1000px;
-    
+
     margin: 300px auto 0px;
     border-radius: 30px;
     box-shadow: 2px 2px 5px black;
     position: relative;
     padding: 35px;
-    
+
 }
 
 .custom-h1 {
@@ -36,33 +36,33 @@ body {
 .custom-section {
     width: 100%;
     height: 100%;
-   
-    
-    
+
+
+
 
 
 }
 
-.row{
+.row {
     --bs-gutter-x: 0rem;
 
 }
 
-.left-column{
+.left-column {
     background-color: hsl(0, 0%, 100%);
-    
-    
+
+
 
 
 }
 
-.right-column{
+.right-column {
     background-color: hsl(183, 100%, 15%)
 }
 
 
-.custom-input-2{
-    height:36px;
+.custom-input-2 {
+    height: 36px;
 }
 
 .custom-container {
@@ -78,40 +78,111 @@ body {
     text-align: center;
     max-width: 130px;
 }
-.bill,.select-tip,.number-of-people{
+
+.bill,
+.select-tip,
+.number-of-people {
     margin-bottom: 55px;
-    width:90%
+    width: 90%
 }
 
-label.btn-outline-primary{
+label.btn-outline-primary {
     text-align: center;
 }
 
-.right-column{
+.right-column {
     padding: 30px;
     border-radius: 30px;
     position: relative;
 }
 
-.Tip-Result{
+.Tip-Result {
     font-size: 45px !important;
     text-align: end;
 }
 
 
-.Total-Result{
+.Total-Result {
     font-size: 45px !important;
     text-align: end;
+}
+
+.person-span {
+    font-size: 17px !important;
+}
+
+
+.right-column-first-div button {
+    position: absolute;
+    bottom: 30px;
+    width: 87%;
+
+}
+
+.bill,
+.form-control::placeholder {
+    color: hsl(183, 100%, 15%);
+}
+
+.select-tip div div {
+    background-color: hsl(183, 100%, 15%);
+
+}
+
+.select-tip div div:hover {
+    background-color: hsl(172, 67%, 45%);
+}
+
+
+
+.select-tip div label {
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+}
+.select-tip div div:focus{
+    border-color: transparent !important;
+}
+.select-tip div label:hover {
+    background-color: transparent;
+    color: hsl(183, 100%, 15%);
+}
+
+.select-tip div input:checked {
+    background-color: hsl(172, 67%, 45%);
+    
+}
+
+.btn-outline-primary {
+    background-color: hsl(172, 67%, 45%);
+}
+
+input[type="radio"]:checked+label {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+
+}
+
+
+#reset-Button{
+    background-color: hsl(172, 67%, 45%);
+    border-color: transparent;
+    color:  hsl(183, 100%, 15%);
+}
+
+#reset-Button:hover{
+    background-color: hsl(172, 100%, 75%);
+}
+
+#reset-Button:focus{
+    box-shadow: none;
 }
 
 .person-span{
-    font-size:17px !important;
+    color:hsl(184, 14%, 56%);
 }
 
+.Total,.Tip-Amount{color: hsl(0, 0%, 100%);}
 
-.right-column-first-div button{
-    position: absolute;
-    bottom:30px;
-    width:87%;
-    
+#Total-Result,#Tip-Result{
+    color: hsl(172, 67%, 45%);
 }
