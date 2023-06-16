@@ -12,13 +12,14 @@ body {
 
 .custom-main {
     background-color: hsl(0, 0%, 100%);
-    width: 1000px;
+    width: max-content;
 
     margin: 300px auto 0px;
     border-radius: 30px;
     box-shadow: 2px 2px 5px black;
     position: relative;
     padding: 35px;
+    
 
 }
 
