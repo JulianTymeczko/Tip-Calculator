@@ -13,7 +13,7 @@ body {
 .custom-main {
     background-color: hsl(0, 0%, 100%);
     width: max-content;
-
+    
     margin: 300px auto 0px;
     border-radius: 30px;
     box-shadow: 2px 2px 5px black;
@@ -73,6 +73,25 @@ body {
     grid-gap: 15px;
 }
 
+.bill form{
+    position: relative;
+}
+.bill form img{
+    position: absolute;
+    left: 20px; 
+    top: 70%;
+    transform: translateY(-50%);
+}
+
+.number-of-people form{
+    position: relative;
+}
+.number-of-people form img{
+    position: absolute;
+    left: 20px; 
+    top: 70%;
+    transform: translateY(-50%);
+}
 .item {
     background-color: #f2f2f2;
     padding: 20px;
@@ -89,8 +108,11 @@ body {
 
 label.btn-outline-primary {
     text-align: center;
+    
 }
-
+.number-of-people label{
+    color:hsl(183, 100%, 15%)
+}
 .right-column {
     padding: 30px;
     border-radius: 30px;
@@ -162,18 +184,39 @@ input[type="radio"]:checked+label {
     color: hsl(183, 100%, 15%);
 
 }
+.bill input{
+    color: hsl(183, 100%, 15%);
+}
 
+.number-of-people input{
+    color: hsl(183, 100%, 15%);
+}
 
 #reset-Button{
     background-color: hsl(172, 67%, 45%);
     border-color: transparent;
     color:  hsl(183, 100%, 15%);
 }
-
+.bill input::placeholder{
+    text-align: end;
+   
+    
+}
+.bill input{
+    text-align: end;
+}
+.number-of-people input{
+    text-align: end;
+}
+.number-of-people input::placeholder{
+    text-align: end;
+}
 #reset-Button:hover{
     background-color: hsl(172, 100%, 75%);
 }
-
+.select-tip h1{
+    color: hsl(183, 100%, 15%);
+}
 #reset-Button:focus{
     box-shadow: none;
 }
@@ -186,4 +229,43 @@ input[type="radio"]:checked+label {
 
 #Total-Result,#Tip-Result{
     color: hsl(172, 67%, 45%);
+}
+
+@media screen and (max-width: 995px) {
+    .custom-main{
+        width: 100%;
+    }
+    .Total-Result,.Tip-Result{
+        font-size: 30px !important;
+    }
+    .Total-Result{
+        margin-bottom: 150px;
+    }
+    #custom-percentage{
+        font-size:20px !important;
+        max-width: fit-content;
+    }
+    .custom-h1{
+       left: 45%;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .custom-main{
+        width: 100%;
+    }
+    .Total-Result,.Tip-Result{
+        font-size: 30px !important;
+    }
+    .Total-Result{
+        margin-bottom: 150px;
+    }
+    #custom-percentage{
+        font-size:11px !important;
+        max-width: fit-content;
+    }
+    .fixed-percentage label{
+        font-size: 18px !important;
+    }
 }
