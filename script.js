@@ -86,107 +86,35 @@ numberOfPeople.addEventListener("input", function () {
     }
 
 })
+customTipPercentage.addEventListener("input", function () {
+    
+    if ((customTipPercentage.value).includes(".")){
+        return;
+    }
+   else if (!((customTipPercentage.value).includes("."))){
+    if (customTipPercentage.value != "" && bill.value != "" && numberOfPeople.value != "") {
+        y = ((parseInt(bill.value) * (parseInt(customTipPercentage.value) / 100) / parseInt(numberOfPeople.value)).toString()).split(".")
+        if (y[1] != undefined && y[1].length >= 2) {
 
+            tipResult.textContent = `$${y[0]}.${y[1].slice(0, 2)}`
+            totalResult.textContent = "$" + (parseFloat(tipResult.textContent.slice(1)) + parseInt(bill.value) / parseInt(numberOfPeople.value)).toFixed(2)
+        }
+        else if (y[1] != undefined && y[1].length == 1) {
+
+            tipResult.textContent = `$${y[0]}.${y[1]}0`
+            totalResult.textContent = "$" + (parseFloat(tipResult.textContent.slice(1)) + parseInt(bill.value) / parseInt(numberOfPeople.value)).toFixed(2)
+        }
+        else if (y[1] == undefined) {
+
+            tipResult.textContent = `$${y[0]}.00`
+            totalResult.textContent = "$" + (parseFloat(tipResult.textContent.slice(1)) + parseInt(bill.value) / parseInt(numberOfPeople.value)).toFixed(2)
+        }
+        
+    }
+
+}})
 resetButton.addEventListener("click", function () {
     location.reload()
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

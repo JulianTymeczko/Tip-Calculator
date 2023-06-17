@@ -98,6 +98,9 @@ body {
     text-align: center;
     max-width: 130px;
 }
+#custom-percentage{
+    position: relative;
+}
 
 .bill,
 .select-tip,
@@ -149,6 +152,7 @@ label.btn-outline-primary {
 
 .select-tip div div {
     background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
 
 }
 
