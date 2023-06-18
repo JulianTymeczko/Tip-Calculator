@@ -160,7 +160,10 @@ label.btn-outline-primary {
     background-color: hsl(172, 67%, 45%);
 }
 
-
+.invisibleRadio{
+    position: absolute;
+    display: none;
+}
 
 .select-tip div label {
     background-color: transparent;
