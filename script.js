@@ -9,6 +9,7 @@ var customTipPercentage = document.getElementById("custom-percentage")
 var x = ""
 var y = ""
 var resetButton = document.getElementById("reset-Button")
+
 for (var i = 0; i < fixedTipPercentage.length; i++) {
     fixedTipPercentage[i].addEventListener("click", function () {
         x = this.textContent
@@ -65,7 +66,7 @@ bill.addEventListener("input", function () {
 numberOfPeople.addEventListener("input", function () {
 
 
-    if ((x != "" || customTipPercentage.value != "") && bill.value != "" && numberOfPeople.value != "" && parseInt(numberOfPeople.value) > 0 && parseInt(bill.value) > 0) {
+    if (x != "" && bill.value != "" && numberOfPeople.value != "" && parseInt(numberOfPeople.value) > 0 && parseInt(bill.value) > 0) {
         y = ((parseInt(bill.value) * (parseInt(x) / 100) / parseInt(numberOfPeople.value)).toString()).split(".")
         if (y[1] != undefined && y[1].length >= 2) {
 
@@ -92,7 +93,8 @@ customTipPercentage.addEventListener("input", function () {
         return;
     }
     else if (!((customTipPercentage.value).includes("."))) {
-        if (customTipPercentage.value != "" && bill.value != "" && numberOfPeople.value != "" && parseInt(numberOfPeople.value) > 0 && parseInt(bill.value) > 0 && parseInt(customTipPercentage.value) > 0) {
+       x = customTipPercentage.value
+        if (x != "" && bill.value != "" && numberOfPeople.value != "" && parseInt(numberOfPeople.value) > 0 && parseInt(bill.value) > 0 && parseInt(x) > 0) {
             y = ((parseInt(bill.value) * (parseInt(customTipPercentage.value) / 100) / parseInt(numberOfPeople.value)).toString()).split(".")
             if (y[1] != undefined && y[1].length >= 2) {
 
