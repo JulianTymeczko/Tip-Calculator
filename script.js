@@ -1,4 +1,4 @@
-// custom percentages need to work ///////////////////////////////////////////////////////////////////////////////////////////
+
 
 var tipResult = document.getElementById("Tip-Result")
 var totalResult = document.getElementById("Total-Result")
@@ -10,9 +10,13 @@ var x = ""
 var y = ""
 var resetButton = document.getElementById("reset-Button")
 
+var radioInput = document.querySelectorAll("input[type='radio']")
+
 for (var i = 0; i < fixedTipPercentage.length; i++) {
     fixedTipPercentage[i].addEventListener("click", function () {
         x = this.textContent
+      
+       
 
         if (bill.value != "" && numberOfPeople.value != "" && parseInt(numberOfPeople.value) > 0 && parseInt(bill.value) > 0) {
             y = ((parseInt(bill.value) * (parseInt(x) / 100) / parseInt(numberOfPeople.value)).toString()).split(".")
@@ -93,7 +97,13 @@ customTipPercentage.addEventListener("input", function () {
         return;
     }
     else if (!((customTipPercentage.value).includes("."))) {
-       x = customTipPercentage.value
+        x = customTipPercentage.value
+       for (var i = 0; i< radioInput.length; i++){
+        if (radioInput[i].checked){
+            radioInput[i].checked = false
+        }
+       }
+
         if (x != "" && bill.value != "" && numberOfPeople.value != "" && parseInt(numberOfPeople.value) > 0 && parseInt(bill.value) > 0 && parseInt(x) > 0) {
             y = ((parseInt(bill.value) * (parseInt(customTipPercentage.value) / 100) / parseInt(numberOfPeople.value)).toString()).split(".")
             if (y[1] != undefined && y[1].length >= 2) {
